@@ -12,7 +12,7 @@ jobs:
   CodeQL-Build:
 
     # CodeQL runs on ubuntu-latest and windows-latest
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
     - name: Checkout repository

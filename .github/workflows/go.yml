@@ -10,7 +10,7 @@ on:
 jobs:
   lint-go:
     name: Lint Go code
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -21,7 +21,7 @@ jobs:
           args: --timeout 5m
   build:
     name: Build
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Set up Go
         uses: actions/setup-go@v2
@@ -61,7 +61,7 @@ jobs:
 
   codegen:
     name: Verify Codegen
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     env:
       GOPATH: /home/runner/go
       PROTOC_ZIP: protoc-3.12.3-linux-x86_64.zip

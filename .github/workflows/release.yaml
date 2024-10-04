@@ -9,7 +9,7 @@ on:
 
 jobs:
   release-images:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - name: Checkout
@@ -108,7 +108,7 @@ jobs:
           mv /tmp/.buildx-cache-new /tmp/.buildx-cache
 
   release-artifacts:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - name: Checkout
